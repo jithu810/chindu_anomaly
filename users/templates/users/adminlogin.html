@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %} {% load crispy_forms_tags %} {% block content %}
+
+
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    
+    <label for="fname">Name</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="lname">Password</label><br>
+    <input type="text" id="password" name="password">
+
+<button type="submit">Login</button>
+</form>
+
+
+
+
+
+{% endblock content%}

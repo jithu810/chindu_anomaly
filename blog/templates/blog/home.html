@@ -1,0 +1,43 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+
+<div class="bg">
+
+
+  <div class="container">
+      <div class="card text-black bg-white mb-3" id="cards" style="max-width: 18rem;">
+          <div class="card-header">NORMAL</div>
+          <div class="card-body">
+              <h5 class="card-title">200 MEGABYTE</h5>
+              <p class="card-text"><a href="{% url 'register' %}" style="text-decoration: none;color: white;">ACTIVATE NOW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+          </div>
+      </div>
+      <div class="card text-black bg-white mb-3" id="cards" style="max-width: 18rem;">
+          <div class="card-header">STANDARD</div>
+          <div class="card-body">
+              <h5 class="card-title">700 MEGABYTE</h5>
+              <p class="card-text"><a href="" style="text-decoration: none;color: white;">ACTIVATE NOW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+          </div>
+      </div>
+      <div class="card text-black bg-white mb-3" id="cards" style="max-width: 18rem;">
+          <div class="card-header">PREMIUM</div>
+          <div class="card-body">
+              <h5 class="card-title">1  GIGABYTE</h5>
+              <p class="card-text"><a href="" style="text-decoration: none;color: white;">ACTIVATE NOW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+          </div>
+      </div>
+      <div class="card text-black bg-white mb-3" id="cards" style="max-width: 18rem;">
+          <div class="card-header">PRO</div>
+          <div class="card-body">
+              <h5 class="card-title">2 GIGABYTE</h5>
+              <p class="card-text"><a href="" style="text-decoration: none;color: white;">ACTIVATE NOW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+          </div>
+      </div>
+  </div>
+  <form action="" method="POST">
+      {% csrf_token%}
+
+  </form>
+  </div>
+{% endblock content %}

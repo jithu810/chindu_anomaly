@@ -1,0 +1,237 @@
+{% extends "blog/base.html" %} {% load crispy_forms_tags %} {% block content %}
+
+<style>
+    input{
+        width: 400px;
+    }
+    .main{
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+    }
+
+    td{
+        text-align: center;
+        background-color: black;
+        color: white;
+
+    }
+
+    table{
+        border: 1;
+        width: 100%;
+        margin-top: 3rem;
+        margin-left: 2rem;
+
+    }
+    th{
+        background-color: black;
+        color: white;
+    }
+
+
+    
+</style>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+
+
+
+<div class="main">
+<form action="" method="post">
+    {% csrf_token %}
+
+    
+    <label for="fname">duration</label><br>
+    <input type="text" id="1" name="1"><br>
+    <label for="lname">protocol_type</label><br>
+    <input type="text" id="2" name="2"><br>
+
+     
+    <label for="fname">flag</label><br>
+    <input type="text" id="3" name="3"><br>
+    <label for="lname">src_bytes</label><br>
+    <input type="text" id="4" name="4"><br>
+
+    <label for="fname">dst_bytes</label><br>
+    <input type="text" id="51" name="51"><br>
+    <label for="lname">land</label><br>
+    <input type="text" id="5" name="5"><br>
+
+     
+    <label for="fname">wrong_fragment</label><br>
+    <input type="text" id="6" name="6"><br>
+    <label for="lname">urgent</label><br>
+    <input type="text" id="7" name="7"><br>
+
+    <label for="fname">hot</label><br>
+    <input type="text" id="8" name="8"><br>
+    <label for="lname">num_failed_logins</label><br>
+    <input type="text" id="9" name="9"><br>
+     
+    <label for="fname">logged_in</label><br>
+    <input type="text" id="10" name="10"><br>
+    <label for="lname">num_compromised</label><br>
+    <input type="text" id="11" name="11"><br>
+
+    <label for="fname">root_shell</label><br>
+    <input type="text" id="12" name="12"><br>
+    <label for="lname">su_attempted</label><br>
+    <input type="text" id="13" name="13"><br>
+
+     
+    <label for="fname">num_root</label><br>
+    <input type="text" id="14" name="14"><br>
+    <label for="lname">num_file_creations</label><br>
+    <input type="text" id="15" name="15"><br>
+
+    <label for="fname">num_shells</label><br>
+    <input type="text" id="16" name="16"><br>
+    <label for="lname">num_access_files</label><br>
+    <input type="text" id="17" name="17"><br>
+
+    <label for="fname">is_guest_login</label><br>
+    <input type="text" id="18" name="18"><br>
+    <label for="lname">count</label><br>
+    <input type="text" id="19" name="19"><br>
+
+
+    
+    <label for="fname">srv_count</label><br>
+    <input type="text" id="20" name="20"><br>
+    <label for="lname">serror_rate</label><br>
+    <input type="text" id="21" name="21"><br>
+
+       
+    <label for="fname">srv_serror_rate</label><br>
+    <input type="text" id="22" name="22"><br>
+    <label for="lname">rerror_rate</label><br>
+    <input type="text" id="23" name="23"><br>
+
+
+
+       
+    <label for="fname">srv_rerror_rate</label><br>
+    <input type="text" id="24" name="24"><br>
+    <label for="lname">same_srv_rate</label><br>
+    <input type="text" id="25" name="25"><br>
+
+           
+    <label for="fname">diff_srv_rate</label><br>
+    <input type="text" id="26" name="26"><br>
+    <label for="lname">srv_diff_host_rate</label><br>
+    <input type="text" id="27" name="27"><br>
+
+
+           
+    <label for="fname">dst_host_count</label><br>
+    <input type="text" id="28" name="28"><br>
+    <label for="lname">dst_host_srv_count</label><br>
+    <input type="text" id="29" name="29"><br>
+
+    <label for="fname">dst_host_same_srv_rate</label><br>
+    <input type="text" id="30" name="30"><br>
+    <label for="lname">dst_host_diff_srv_rate</label><br>
+    <input type="text" id="31" name="31"><br>
+
+
+    
+    <label for="fname">dst_host_same_src_port_rate</label><br>
+    <input type="text" id="32" name="32"><br>
+    <label for="lname">dst_host_srv_diff_host_rate</label><br>
+    <input type="text" id="33" name="33"><br>
+
+     
+    <label for="fname">dst_host_serror_rate</label><br>
+    <input type="text" id="34" name="34"><br>
+    <label for="lname">dst_host_srv_serror_rate</label><br>
+    <input type="text" id="35" name="35"><br>
+
+         
+    <label for="fname">dst_host_rerror_rate</label><br>
+    <input type="text" id="36" name="36"><br>
+    <label for="lname">dst_host_srv_rerror_rate</label><br>
+    <input type="text" id="37" name="37"><br>
+
+
+
+
+<button type="submit">predict</button>
+</form>
+</div>
+
+
+<table border="1">
+
+    <tr>
+        <th>Name</th>
+        <th>Training time</th>
+        <th>Testing time</th>
+        <th>Train score</th>
+        <th>Train score</th>
+    </tr>
+
+    <tr>
+<th>
+    Naive
+</th>
+
+{% for i in data1 %}
+
+<td>{{i}}</td>
+
+{% endfor %}
+    </tr>
+
+    <tr>
+        <th>
+            decision tree
+        </th>
+
+
+   {% for i in data2 %}
+
+<td>{{i}}</td>
+
+{% endfor %}
+
+            </tr>
+
+            <tr>
+                <th>
+                    random forest
+                </th>
+                {% for i in data3 %}
+
+<td>{{i}}</td>
+
+{% endfor %}
+                    </tr>
+
+                    <tr>
+                        <th>
+                            logistic regression
+                        </th>
+                        {% for i in data4 %}
+
+                        <td>{{i}}</td>
+                        
+                        {% endfor %}
+                            </tr>
+
+
+</table>
+
+
+
+{% endblock content%}

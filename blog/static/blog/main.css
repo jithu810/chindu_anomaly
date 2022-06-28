@@ -1,0 +1,213 @@
+body {
+    margin-top: 0;
+    color: white;
+    background: linear-gradient(270deg, #fcf567, #da211c, #ff9e0c, #811eb5, #3600cd);
+    background-size: 1000% 1000%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #444444;
+}
+
+ul {
+    margin: 0;
+}
+
+.bg-steel {
+    background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.article-title {
+    color: #444444;
+}
+
+a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+
+.article-content {
+    white-space: pre-line;
+}
+
+.article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+}
+
+#select {
+    width: 500px;
+}
+
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}
+
+.top-bar {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 7%;
+    width: 100%;
+    background-color: black;
+}
+
+.title {
+    position: absolute;
+    left: 2%;
+    top: 10px;
+    font-family: mistral;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.username {
+    color: white;
+    position: absolute;
+    right: 4%;
+    top: 25%;
+    text-decoration: none;
+}
+
+.profile {
+    color: white;
+    position: absolute;
+    right: 12%;
+    top: 25%;
+    text-decoration: none;
+}
+
+.container {
+    /* background-image: linear-gradient(to right, #661400, #cc2900); */
+    margin-left: 15px;
+    position: absolute;
+    top: 25%;
+    left: 6%;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cards {
+    padding: 20px;
+    margin: 5px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #661400, #cc2900);
+    color: white;
+}
+
+#cards:hover {
+    box-shadow: 2px 2px 10px #661400;
+}
+
+.bg {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+}
+
+.profileview {
+    color: white;
+    position: absolute;
+    right: 22%;
+    top: 25%;
+    text-decoration: none;
+}

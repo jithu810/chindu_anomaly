@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %} {% load crispy_forms_tags %} {% block content %}
+
+
+
+<table class="table" style="background-color: white;">
+    <thead>
+        <tr>
+            <th scope="col">Sl no</th>
+            <th scope="col">Name</th>
+            <th scope="col">Size</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in userData%}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{i.name}}</td>
+            <td>{{i.Approves}}
+                <B>bit</td>
+            <td>{{i.status}}</td>  
+            <td><a href="{% url 'status' i.id %}" style="color: white;" id="approve-btn" class="btn btn-success" type="submit">Approve</a></td>
+        </tr>
+        {% endfor%}
+    </tbody>
+</table>
+
+
+
+
+
+
+{% endblock content%}
